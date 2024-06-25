@@ -1,4 +1,6 @@
-package com.example.demo.Entities;
+package com.example.demo.Services;
+
+import com.example.demo.Entities.StudentResponse;
 
 import java.util.List;
 
@@ -8,5 +10,5 @@ public interface StudentResponseService {
     StudentResponse updateStudentResponse(StudentResponse StudentResponse);
     void deleteStudentResponseById(long id);
     void deleteAllStudentResponse();
-    List<Prof> getAllStudentResponse();
+    List<StudentResponse> getAllStudentResponse();
 }

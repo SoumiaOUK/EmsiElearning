@@ -1,14 +1,15 @@
 package com.example.demo.Services;
 
 import com.example.demo.Entities.Course;
+import com.example.demo.Entities.Groupe;
 
 import java.util.List;
 
 public interface GroupeService {
-    Course SaveCourse(Course course);
-    Course GetCourseById(long id);
-    Course updateCourse(Course course);
-    void deleteCourseById(long id);
-    void deleteAllCourse();
-    List<Course> getAllCourse();
+    Groupe SaveGroupe(Groupe groupe);
+    Groupe GetGroupeById(long id);
+    Groupe updateGroupe(Groupe groupe);
+    void deleteGroupeById(long id);
+    void deleteAllGroupe();
+    List<Groupe> getAllGroupe();
 }
