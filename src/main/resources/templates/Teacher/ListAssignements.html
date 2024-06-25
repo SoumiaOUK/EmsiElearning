@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="Template.html"
+><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+<div class="container-fluid">
+  <div style="margin-top: 10px; margin-left: 100px" layout:fragment="content">
+
+  <div class="row mt-4" style="width: 10px">
+    <div class="col-md-12">
+      <button class="btn btn-primary" onclick="createAssignment()" style="border-radius: 10px ;background-color: #4CAF50">
+        <i class="fas fa-plus"></i> Create
+      </button>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header bg-light" style="background-color: #4CAF50; color: #4CAF50">
+          <div class="row">
+            <div class="col-md-9">
+              <h5 class="card-title"><i class="bi bi-file-earmark-richtext-fill" style="color: #4CAF50 ;font-size: 30px"></i> Assignement : BigData TP Hive</h5>
+            </div>
+            <div class="col-md-3 text-right">
+              <p class="card-text">Due May 14</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Posted May 8</p>
+          <div class="row">
+            <div class="assignment" style="width: 900px;">
+              <p><strong></i>Assignement : BigData TP Hive </strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-light">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <p class="card-text">0 Turned in</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <p class="card-text">0 Assigned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header bg-light" style="background-color: #4CAF50; color: #4CAF50">
+          <div class="row">
+            <div class="col-md-9">
+              <h5 class="card-title"><i class="bi bi-file-earmark-richtext-fill" style="color: #4CAF50 ;font-size: 30px"></i> Assignement : BigData TP Hive</h5>
+            </div>
+            <div class="col-md-3 text-right">
+              <p class="card-text">Due May 14</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Posted May 8</p>
+          <div class="row">
+            <div class="assignment" style="width: 900px;">
+              <p><strong></i>Assignement : BigData TP Hive </strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-light">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <p class="card-text">0 Turned in</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <p class="card-text">0 Assigned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header bg-light" style="background-color: #4CAF50; color: #4CAF50">
+          <div class="row">
+            <div class="col-md-9">
+              <h5 class="card-title"><i class="bi bi-file-earmark-richtext-fill" style="color: #4CAF50 ;font-size: 30px"></i> Assignement : BigData TP Hive</h5>
+            </div>
+            <div class="col-md-3 text-right">
+              <p class="card-text">Due May 14</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Posted May 8</p>
+          <div class="row">
+            <div class="assignment" style="width: 900px;">
+              <p><strong></i>Assignement : BigData TP Hive </strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-light">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <p class="card-text">0 Turned in</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <p class="card-text">0 Assigned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+  function createAssignment() {
+    // Implement your logic to create a new assignment
+    console.log("Create assignment button clicked");
+  }
+
+  function viewInstructions() {
+    // Implement your logic to view instructions
+    console.log("View instructions button clicked");
+  }
+</script>
+</body>

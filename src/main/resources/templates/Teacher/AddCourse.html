@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="Template.html"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .form-control:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 10px rgba(76, 195, 80, 0.5);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+
+        .fa-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+<div style="margin-top: 150px; margin-left: 100px" layout:fragment="content">
+    <h2 class="text-center">Add Course</h2>
+    <form enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title"><i class="fas fa-book fa-icon" style="color: #4CAF50"></i>Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="Enter course title">
+
+        </div>
+        <div class="form-group">
+            <label for="description"><i class="fas fa-pencil-alt fa-icon" style="color: #4CAF50"></i>Description</label>
+            <textarea id="description" name="description" class="form-control" placeholder="Enter course description"></textarea>
+
+        </div>
+        <div class="form-group">
+            <label for="pdfFile"><i class="fas fa-file-pdf fa-icon" style="color: #4CAF50"></i>PDF File</label>
+            <input type="file" id="pdfFile" name="pdfFile" class="form-control">
+
+        </div>
+        <button type="submit" class="btn btn-block">Add Course</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>

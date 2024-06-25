@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="Template.html"
+><head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        .section-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .student-list {
+            margin-bottom: 20px;
+        }
+
+        .student-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .student-item:hover {
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .student-name {
+            font-size: 16px;
+        }
+
+        .student-count {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="margin-top: 150px; margin-left: 100px" layout:fragment="content">
+
+    <div class="section-header">Teachers</div>
+    <div class="student-list">
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">lamia karim</span>
+        </div>
+    </div>
+
+    <div class="section-header">Classmates</div>
+    <div class="student-list">
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">adou</span>
+        </div>
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">Ahmed</span>
+        </div>
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">Amine</span>
+        </div>
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">Dalal AZIZ</span>
+        </div>
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">Ibtihal</span>
+        </div>
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">Mohamed Amine Taouis</span>
+        </div>
+        <div class="student-item">
+            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
+            <span class="student-name">aya aabid</span>
+        </div>
+    </div>
+</div></div>
+    <span class="student-count">44 students</span>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@ public class Controllers {
         return "LoginSignUpForm";
     }
 
-    @RequestMapping("/HomePage")
+    @RequestMapping("/")
     public String Home(){
         return "HomePage";
     }
