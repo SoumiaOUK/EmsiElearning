@@ -1,11 +1,13 @@
 package com.example.demo.Entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@Data
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +15,7 @@ public class Course {
     private String title;
     private String filePath;
     private String description;
-    private String createdAt;
+    private Date createdAt;
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Module> modules;
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)

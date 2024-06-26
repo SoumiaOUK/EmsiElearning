@@ -1,0 +1,6 @@
+INSERT INTO `course` (`id`, `created_at`, `description`, `file_path`, `title`) VALUES (NULL, '05/04/2024', 'Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered,', '/user/user/user/yser', 'big data course1 ');
+INSERT INTO `module` (`id`, `name`, `course_id`) VALUES (NULL, 'module 1: biodata', '1');
+INSERT INTO `groupe` (`id`, `name`, `module_id`) VALUES (NULL, '4IIR-G91', '1');
+INSERT INTO `prof` (`id`, `matricule`) VALUES (NULL, 'prfSoumia1');
+INSERT INTO `user` (`id`, `email`, `first_name`, `last_name`, `password`, `username`, `prof_id`) VALUES (NULL, 'Soumia.oukhira@gmail.com', 'Soumia', 'okra', '123456', 'sousou', '1');
+INSERT INTO `student` (`id`, `cne`, `groupe_id`, `user_id`) VALUES (NULL, 'dfgdfdfgdf', '1', '1');

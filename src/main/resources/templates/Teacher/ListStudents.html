@@ -67,37 +67,15 @@
     </div>
 
     <div class="section-header">Classmates</div>
-    <div class="student-list">
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">adou</span>
+        <div class="student-list">
+            <div th:each="student : ${students}" class="student-item">
+                <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px" class="fas fa-user-circle"></i>
+                <span class="student-name" th:text="${student.firstName}+' - ' +${student.lastName}"></span>
+            </div>
         </div>
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">Ahmed</span>
-        </div>
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">Amine</span>
-        </div>
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">Dalal AZIZ</span>
-        </div>
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">Ibtihal</span>
-        </div>
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">Mohamed Amine Taouis</span>
-        </div>
-        <div class="student-item">
-            <i style="color: #4CAF50 ;font-size: 30px ; margin: 15px"  class="fas fa-user-circle"></i>
-            <span class="student-name">aya aabid</span>
-        </div>
-    </div>
-</div></div>
+        <span class="student-count" th:text="${students.size()} + ' students'"></span>
+
+    </div></div>
     <span class="student-count">44 students</span>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

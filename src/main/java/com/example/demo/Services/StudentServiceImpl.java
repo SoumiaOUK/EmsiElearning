@@ -38,7 +38,7 @@ public class StudentServiceImpl implements StudentService {
     public void deleteAllStudent() {
         studentRepository.deleteAll();
     }
-
+//get all student's by connected prof
     @Override
     public List<Student> getAllStudent() {
         return studentRepository.findAll();

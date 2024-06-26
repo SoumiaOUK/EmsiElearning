@@ -139,8 +139,10 @@
                     <i class="bi bi-person-bounding-box" style="color: #4CAF50"></i>
                     <input type="text" placeholder="Announce something to your class">
                 </div>
-                <div class="assignment" style="width: 900px;">
-                    <p><strong><i class="bi bi-file-earmark-richtext-fill" style="color: #4CAF50 ;font-size: 30px"></i> Soumia posted a new assignment: Title</strong></p>
+                <div class="assignment" style="width: 900px;" th:each="course : ${courses}">
+                    <p><strong><i class="bi bi-file-earmark-richtext-fill" style="color: #4CAF50 ;font-size: 30px"></i>
+                        <span th:text="${course.title}"></span>
+                        </strong></p>
                 </div>
             </td>
         </tr>
