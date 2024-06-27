@@ -1,6 +1,5 @@
 package com.example.demo.Repositories;
 
-import com.example.demo.Entities.Course;
 import com.example.demo.Entities.StudentResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 

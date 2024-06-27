@@ -12,6 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -46,19 +47,20 @@ public class TeacherController {
     public String addCourse(){
         return "Teacher/AddCourse";
     }
-    @RequestMapping("/saveCourse")
-    public String saveCourse(@ModelAttribute("leaveType")Course course, BindingResult bR, ModelMap modelMap){
+    @RequestMapping(value = "/saveCourse", method = RequestMethod.POST)
+    public String saveCourse(@ModelAttribute("course") Course course, BindingResult bR, ModelMap modelMap) {
         if (bR.hasErrors()) {
-            // If there are validation errors, add an error message to the model
             modelMap.addAttribute("errorMessage", "Please fix the validation errors and submit again.");
-            return "createLeaveType"; // Return to the form with the error message
+            return "Teacher/AddCourse";
         }
         courseService.SaveCourse(course);
-        return "redirect : /listCourses";
+        return "redirect:/listCourses";
     }
-    @RequestMapping("/addAssignement")
-    public String addAssignement(){
-        return "Teacher/AddAssignement";
+    @RequestMapping("/addAssignment")
+    public String addAssignement(ModelMap model){
+        List<Course> courses = courseService.getAllCourse();
+        model.addAttribute("courses", courses);
+        return "Teacher/AddAssignment";
     }
     @RequestMapping("/saveAssignment")
     public String saveAssignment(@ModelAttribute("leaveType")Assignment assignment, BindingResult bR, ModelMap modelMap){
@@ -68,7 +70,7 @@ public class TeacherController {
             return "createLeaveType"; // Return to the form with the error message
         }
         assignmentService.SaveAssignment(assignment);
-        return "redirect : /listCourses";
+        return "redirect:/listAssignments";
     }
 
 

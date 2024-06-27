@@ -1,25 +1,22 @@
 package com.example.demo.Entities;
 
 import com.example.demo.security.entities.User;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 @Entity
-public class Prof{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String matricule;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Prof extends User{
 
-    @OneToMany(mappedBy = "prof", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
     private List<Comment> comments;
     // getters and setters
-
-
-    @OneToOne(fetch = FetchType.EAGER,mappedBy = "prof")
-    private User user;
 
 }

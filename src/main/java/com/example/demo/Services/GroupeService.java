@@ -1,6 +1,5 @@
 package com.example.demo.Services;
 
-import com.example.demo.Entities.Course;
 import com.example.demo.Entities.Groupe;
 
 import java.util.List;

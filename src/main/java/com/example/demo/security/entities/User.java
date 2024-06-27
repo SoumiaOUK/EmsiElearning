@@ -17,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     @Id
     private String userId;
@@ -24,18 +25,6 @@ public class User {
     private String username;
     private String password;
     //Each user has many roles
-
-
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "prof_id")
-    private Prof prof;
-
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_id")
-    private Student student;
-
     @ManyToOne
     private Role role;
 

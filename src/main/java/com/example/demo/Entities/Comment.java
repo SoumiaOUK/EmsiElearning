@@ -1,9 +1,7 @@
 package com.example.demo.Entities;
 
+import com.example.demo.security.entities.User;
 import jakarta.persistence.*;
-
-import javax.xml.crypto.Data;
-import java.util.Date;
 
 @Entity
 public class Comment {
@@ -13,8 +11,7 @@ public class Comment {
     private String content;
     private String createdAt;
     @ManyToOne
-    @JoinColumn(name = "prof_id")
-    private Prof prof;
+    private User user;
     // getters and setters
 
     @ManyToOne

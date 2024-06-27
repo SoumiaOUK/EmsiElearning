@@ -10,10 +10,7 @@ public class Module {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "module", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Groupe> groupes;
-    @ManyToOne
-    @JoinColumn(name = "course_id")
-    private Course course;
+    @OneToMany
+    private List<Course> courses;
     // getters and setters
 }

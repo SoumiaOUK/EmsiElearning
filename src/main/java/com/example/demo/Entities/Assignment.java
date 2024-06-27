@@ -1,5 +1,6 @@
 package com.example.demo.Entities;
 
+import com.example.demo.security.entities.User;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,7 +19,10 @@ public class Assignment {
     @ManyToOne
     @JoinColumn(name = "course_id")
     private Course course;
+
     @OneToMany(mappedBy = "assignment", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;
+    @ManyToOne
+    private User user;
     // getters and setters
 }

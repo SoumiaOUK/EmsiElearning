@@ -63,7 +63,7 @@
 <div class="container">
 <div style="margin-top: 150px; margin-left: 100px" layout:fragment="content">
     <h2 class="text-center">Add Assignement</h2>
-    <form enctype="multipart/form-data">
+    <form th:action="@{saveAssignment}" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title"><i class="fas fa-book fa-icon" style="color: #4CAF50"></i>Title</label>
             <input type="text" id="title" name="title" class="form-control" placeholder="Enter course title">
@@ -75,6 +75,13 @@
 
         </div>
         <div class="form-group">
+            <label for="course">Course:</label>
+            <select id="course" name="course" class="form-select">
+                <option th:each="course : ${courses}" th:value="${course.id}" th:text="${course.title}"></option>
+            </select>
+        </div>
+        <!--
+        <div class="form-group">
             <label for="pdfFile"><i class="fas fa-file-pdf fa-icon" style="color: #4CAF50"></i>Due date</label>
             <input type="date" name="Due Date" id="Due Date" class="form-control">
         </div>
@@ -84,6 +91,7 @@
             <input type="file" id="pdfFile" name="pdfFile" class="form-control">
 
         </div>
+        -->
 
         <button type="submit" class="btn btn-block">Add Course</button>
     </form>

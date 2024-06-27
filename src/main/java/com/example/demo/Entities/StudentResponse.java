@@ -2,8 +2,6 @@ package com.example.demo.Entities;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
-
 @Entity
 public class StudentResponse {
     @Id
@@ -13,7 +11,7 @@ public class StudentResponse {
     private String submitDate;
     private String status;
     @ManyToOne
-    @JoinColumn(name = "student_id")
+    @JoinColumn
     private Student student;
     // getters and setters
 }
